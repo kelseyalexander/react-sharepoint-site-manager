@@ -1,0 +1,37 @@
+.StyledContainer {
+    box-shadow: 0 2px 4px 0 rgba(50, 50, 93, 0.1);
+    border-top: 4px solid #85d3f2;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    .section-title {
+        padding: 10px 10px 0;
+        flex: 1;
+
+        > span.title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .message {
+            font-weight: 500;
+            
+            &.success {
+                color: #00bb89;
+            }
+            &.error {
+                color: #e64200;
+            }
+        }
+    }
+
+    .section-body {
+        padding: 10px 10px 0;
+        flex: 3;
+        position: relative;
+    }
+}

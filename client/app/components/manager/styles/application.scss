@@ -1,0 +1,36 @@
+//Main application wrapper
+#app {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 85px);
+    background-color: #fff;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .Application {
+        display: flex;
+        flex-direction: row;
+
+        > div {
+            overflow-y: auto;
+            height: calc(100vh - 85px);
+            padding: 1rem;
+            width: 100%;
+            background-color: #fbfcff;
+        }
+
+        section {
+            width: 1000px;
+        }
+    }
+
+    pre {
+        background-color: #f9fcfd;
+        padding: 1rem;
+        border: 1px solid rgb(239, 239, 239);
+    }
+}

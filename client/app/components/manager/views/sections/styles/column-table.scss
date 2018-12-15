@@ -1,0 +1,110 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+.ColumnTable {
+    @include placeholder {
+        color: rgba(0,0,0,0.4) !important;
+    }
+    
+    .new-column {
+        text-align: right;
+        top: -25px;
+        right: 11px;
+        margin-bottom: 10px;
+    }
+
+    .required {
+        border: 1px solid palevioletred !important;
+        border-radius: 3px !important;
+    }
+
+    .edit {
+        cursor: pointer;
+    }
+
+    .remove {
+        span {
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            color: #e22f2f;
+            cursor: pointer;
+        }
+    }
+
+    .column-table {
+        box-shadow: 0 2px 4px 0 rgba(50, 50, 93, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        overflow-x: auto;
+
+        > .column-row:nth-child(even) {
+            background-color: #e4f3ff;
+        }
+    }
+
+    .column-header > div {
+        color: #fff;
+        background-color: #6198b6;
+    }
+
+    .column-row {
+        display: flex;
+        font-size: 0.75rem;
+
+        > div {
+            padding: 3px 1px;
+            text-align: center;
+            align-self: center;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            max-width: 100%;
+            margin-bottom: auto;
+
+            > select, input {
+                height: 27px;
+                padding: 3px;
+            }
+        }
+
+        > div:not(remove) {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        
+        > div.remove {
+            flex-grow: 0.3;
+            max-width: 80px;
+            min-width: 80px;
+        }
+    }
+
+    .column-row > div > div.Select {
+        //height: 25px !important;
+        text-align: left;
+
+        .Select-input, .Select-control {
+            height: 23px !important;
+        }
+
+        .Select-input > input {
+            padding: 0 !important;
+        }
+
+        .Select-placeholder, .Select-control, .Select-value {
+            line-height: 23px !important;
+        }
+        
+        .Select-menu-outer {
+            display: block;
+            position: relative !important;
+        }
+    }
+}

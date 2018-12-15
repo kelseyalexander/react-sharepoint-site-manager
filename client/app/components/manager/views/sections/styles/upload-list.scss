@@ -1,0 +1,65 @@
+.Uploader {
+    .file-list {
+        background-color: #f9fcfd;
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                background-color: #f9fcfd;
+                height: 25px;
+                z-index: 1;
+                padding-right: 5px;
+                line-height: 26px;
+            }
+
+            > div {
+                display: flex;
+                align-items: center;
+            }
+
+            > div > .FileIcon {
+                font-size: 30px;
+                color: #a2a2a2;
+                margin-right: 10px;
+            }
+
+            .remove-file {
+                z-index: 1;
+            }
+
+            .remove-file {
+                color: #d24848;
+            }
+        }
+
+        button {
+            margin-left: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 7px 10px;
+            font-weight: 700;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    }
+
+    .save-file {
+        width: 100%;
+        margin: 0px !important;
+    }
+}
